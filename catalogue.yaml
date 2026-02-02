@@ -41,8 +41,9 @@
       path: app/
 
   - name: copying service configuration
-    src: catalogue.service
-    dest: /etc/systemd/system/catalogue.service
+    ansible.builtin.copy:
+      src: catalogue.service
+      dest: /etc/systemd/system/catalogue.service
 
   - name: deamon reload
     ansible.builtin.systemd:

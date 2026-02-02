@@ -11,7 +11,7 @@
   - name: install nodejs
     ansible.builtin.dnf:
       name: nodejs
-      start: installed
+      state: installed
 
   - name: craeting app directory
     ansible.builtin.file: 

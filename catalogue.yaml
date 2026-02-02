@@ -38,7 +38,8 @@
 
   - name: download dependencies
     community.general.npm:
-      path: app/
+      path: /app
+
 
   - name: copying service configuration
     ansible.builtin.copy:

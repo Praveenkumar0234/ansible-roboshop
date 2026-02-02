@@ -57,7 +57,7 @@
       enabled: yes
 
   - name: copying mongo repo
-    ansible.builtin.replace:
+    ansible.builtin.copy:
       src: mongo.repo
       dest: /etc/yum.repos.d/mongo.repo
 

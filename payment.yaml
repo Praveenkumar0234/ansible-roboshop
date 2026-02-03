@@ -46,10 +46,10 @@
       src: payment.service
       dest: /etc/systemd/system/payment.service
 
-  - name: unmask payment service
-    ansible.builtin.systemd:
-      name: payment
-      masked: no
+  # - name: unmask payment service
+  #   ansible.builtin.systemd:
+  #     name: payment
+  #     masked: no
 
   - name: reload systemd
     ansible.builtin.systemd:

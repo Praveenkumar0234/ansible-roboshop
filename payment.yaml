@@ -51,9 +51,9 @@
       name: payment
       masked: no
 
-  - name: daemon reload
-    ansible.builtin.systemd_service:
-      daemon_reload: true
+  - name: reload systemd
+    ansible.builtin.systemd:
+      daemon_reload: yes
 
   - name: enable and start payment
     ansible.builtin.service:

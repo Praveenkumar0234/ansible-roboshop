@@ -60,6 +60,9 @@
     ansible.builtin.systemd_service:
       daemon_reload: true
 
+  - name: Unmask user service
+    ansible.builtin.command: systemctl unmask user
+
   - name: enable and start shipping
     ansible.builtin.service:
       name: shipping
